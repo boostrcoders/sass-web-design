@@ -1,0 +1,70 @@
+// Imports
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+
+//Colors Variable
+$colors: (
+  main-font-color: #fcc100,
+  main-white: #fff,
+  main-font-dark-gray: #4d4d4d,
+  main-footer-bg-color: #141414
+);
+
+// Map into colors variable
+@function colors($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// Font Varibale
+$main-font-family: "Great Vibes", cursive;
+// Animation
+@keyframes fadeIn {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// MEDIA QUERY MIXINS
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  // @media screen and (min-width: 769px) and (max-width: 1170px) {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

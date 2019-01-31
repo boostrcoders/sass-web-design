@@ -1,0 +1,80 @@
+//WIDESCREENS
+// @include mediaXl {
+// }
+
+//DESKTOPS &LAPTOPS
+
+@include mediaLg {
+  header,
+  .between-sec {
+    background-attachment: fixed;
+  }
+  .menu {
+    display: none;
+    padding: 2rem 10rem 0;
+    justify-content: space-between;
+  }
+  .nav {
+    display: flex;
+    padding: 2rem 10rem 0;
+    justify-content: space-between;
+    #logo {
+      display: block;
+    }
+    .overlay {
+      position: initial;
+      background: none;
+      opacity: initial;
+      transform: initial;
+
+      ul {
+        flex-direction: row;
+        list-style: none;
+        margin-top: 2px;
+
+        li {
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          margin-right: -1px;
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .center {
+    flex: 1;
+  }
+
+  .add-flex {
+    flex: 1;
+  }
+  .add-padding-right {
+    padding-right: 20px;
+  }
+  .first {
+    order: 1;
+  }
+  .second {
+    order: 2;
+  }
+  .store {
+    min-height: 40rem;
+  }
+  .btn-info {
+    font-size: 1.8rem;
+  }
+}
+
+//TABLETS & NETBOOK
+@include mediaMd {
+}
+
+//SMARTPHONES
+@include mediaSm {
+}
